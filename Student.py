@@ -6,8 +6,8 @@ class Student:
 	def __init__(self, index):
 		self.index = index
 		self.name =''
-		self.availability = {}
-		self.coursesNumber =''
+		self.availability = []
+		self.coursesNumber = 5
 		self.coursesList = []
 
 	def addCourses(self, coursesName):
