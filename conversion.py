@@ -1,14 +1,8 @@
 import json
-#json_time1 = '{"day":"Tuesday", "start":"08:30am", "end":"10:30am"}'
 
-
-#time = json.loads(json_time1)
-
-# this converts date/hr/min to one integer for comparison
-# 
 def convert(time):
         duration = list()
-
+        print 
         #check day first
         if time['day'] == 'Monday':
             FTime = 100
