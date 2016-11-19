@@ -11,11 +11,11 @@ studentList.append(Candelario)
 with open('studentsByAvailability.json') as data_file:
 	data = json.load(data_file)
 
-<<<<<<< HEAD
+
 print data1
 
 conversion.foo()
-=======
+
 	for key, value in data.iteritems():
 		student = Student(key)
 		for items in value:
@@ -34,5 +34,3 @@ conversion.foo()
 
 
 
-
->>>>>>> origin/master
