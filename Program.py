@@ -1,5 +1,7 @@
 from Student import Student
 import json
+import conversion
+
 
 classList = []
 studentList = []
@@ -13,10 +15,13 @@ with open('studentsByAvailability.json') as data_file:
 
 			if type(items) is unicode:
 				student.name = items
+				print student.name
 
 			if type(items) is dict:
 				for key, value in items.iteritems():
-					pass
+					#convert(value)
+					print value
+
 					#print key
 					
 					#print value["day"]
@@ -32,9 +37,7 @@ with open('classes.json') as data_file:
 	data = json.load(data_file)
 
 	for key, value in data["classes"].iteritems():
-		print key
-		print value
-
+		pass
 
 
 

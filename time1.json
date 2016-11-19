@@ -1,0 +1,16 @@
+{
+	"times": {
+    		  		"time1":{
+    		  			"day":"Monday",
+    		  			"start":"08:30am",
+    		  			"end":"10:30am"
+    		  			},
+    		  		"time2":{
+    		  			"day":"Tuesday",
+    		  			"start":"08:00am",
+    		  			"end":"10:00am"
+    		  			}
+    		  }
+    		  }
+
+    		  
