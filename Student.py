@@ -7,8 +7,8 @@ class Student:
 		self.index = index
 		self.name =''
 		self.availability = []
-		self.coursesNumber = 5
+		self.coursesNumber = 0
 		self.coursesList = []
 
 	def addCourses(self, coursesName):
-		coursesNumber -= 1
+		coursesNumber += 1

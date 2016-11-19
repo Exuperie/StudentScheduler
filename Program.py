@@ -16,11 +16,17 @@ with open('studentsByAvailability.json') as data_file:
 			if type(items) is unicode:
 				student.name = items
 				print student.name
+				
 
 			if type(items) is dict:
 				for key, value in items.iteritems():
 					#convert(value)
-					print value
+					
+					student.availability.append(conversion.convert(value))
+				
+		print student.availability
+		print student.index
+		print 
 
 					#print key
 					
