@@ -1,11 +1,11 @@
 #this takes two time points expressed as floats 
 #check for conflict 
 
-cstart = 108.5
-cend = 110.5
-sstart = 108.5
-send = 119
+ctime = [[108.5, 110.5], [115, 119]]
+stime = [108.5, 112]
 
 def compare():
-
+	i = 0
+	while i < len(ctime):
+		ctime
 	print foo()
