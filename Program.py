@@ -142,6 +142,7 @@ for course in courseList:
 
 print " ---- "
 print "End of the first iteration"
+print "Student Schedule in file outputStudents.json"
 print " ---- "
 
 ''' Outputting JSON File
