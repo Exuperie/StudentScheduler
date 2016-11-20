@@ -106,15 +106,15 @@ for student1 in studentWithOneClass:
         # new course
         if (not course.isStudentRegistered(student1) and
                 compare.compare(course.time1, student.availability)):
-            course.printProperties()
-            student1.printProperties()
 
-            # Check a registered student is able to switch to
+
+            # Check a registered student (student2) is able to switch to
             # the time 2 of the same class
             for student2 in course.studentList1:
                 if (compare.compare(course.time2, student2.availability)):
+                    course.printProperties()
+                    student.printProperties()
+                    student2.printProperties()
                     print "Can change"
 
-                else:
-
-                    # Optimization
+                # Optimization

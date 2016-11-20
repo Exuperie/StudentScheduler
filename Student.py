@@ -23,8 +23,8 @@ class Student:
         print
 
         # Courses that this student can take
-        def freeCourses(self, courseList):
-            freeCourseList = []
+        def switchCourses(self, course1, course2):
+
 
         def registerForCourse(self, course):
             if self.student.coursesNumber < 1:
