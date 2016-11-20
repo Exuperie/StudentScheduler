@@ -145,9 +145,9 @@ print "End of the first iteration"
 print "Student Schedule in file outputStudents.json"
 print " ---- "
 
-''' Outputting JSON File
+# Creating the Students schedule JSON File
 
-'''
+
 studentDict = {}
 for student1 in studentList:
     courseListNew = []
@@ -169,8 +169,55 @@ for student1 in studentList:
 with open('outputStudents.json', 'w') as fp:
     json.dump(studentDict, fp)
 
-# with open('outputCourses.json', 'w') as fp:
-#    json.dump(coursesDict, fp)
+# Creating the output Courses JSON file
+
+coursesDict = {}
+classJSON = {}
+
+
+for course in courseList:
+
+    courseJSON = {}
+    studentList = course.studentList1
+    courseTime1 = {}
+    i = 1
+
+    for student in course.studentList1:
+        studentinfo = {}
+        studentinfo['id'] = student.index
+        studentinfo['name'] = student.name
+        studentIndex = "student" + str(i)
+        courseTime1[studentIndex] = (studentinfo)
+        i += 1
+
+    courseTime2 = {}
+    i = 1
+    for student in course.studentList2:
+        studentinfo = {}
+        studentinfo['id'] = student.index
+        studentinfo['name'] = student.name
+        studentIndex = "student" + str(i)
+        courseTime2[studentIndex] = (studentinfo)
+        i += 1
+    time1start = reversetime(course.time1[0])
+    time1end = reversetime(course.time1[1])
+
+    time2start = reversetime(course.time2[0])
+    time2end = reversetime(course.time2[1])
+
+    time1Str = time1start[0] + "-" + str(time1start[1]) + ":" + str(
+        time1start[2]) + "-" + str(time1end[1]) + ":" + str(time1end[2])
+    time2Str = time2start[0] + "-" + str(time2start[1]) + ":" + str(
+        time2start[2]) + "-" + str(time2end[1]) + ":" + str(time2end[2])
+
+    courseJSON[time1Str] = courseTime1
+    courseJSON[time2Str] = courseTime2
+    classJSON[course.name] = courseJSON
+
+coursesDict['classes'] = classJSON
+
+with open('outputCourses.json', 'w') as fp:
+    json.dump(coursesDict, fp)
 
 ''' Optimization
 index = 0
