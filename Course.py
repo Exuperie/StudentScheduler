@@ -18,7 +18,7 @@ class Course:
         print "Remaining spots = ", self.nSpots1, " and ", self.nSpots2
         print "StudentList 1 = ", self.convertStudentObjectToIndexList(self.studentList1)
         print "StudentList 2 = ", self.convertStudentObjectToIndexList(self.studentList2)
-        print
+        print "---"
 
     def addStudent1(self, student):
         self.studentList1.append(student)

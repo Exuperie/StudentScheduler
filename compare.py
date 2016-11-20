@@ -22,4 +22,4 @@ def compare(ctime, stime):
     return False
 
 
-print compare(ctime1, stime1)
+# print compare(ctime1, stime1)
