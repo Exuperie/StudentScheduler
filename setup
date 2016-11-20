@@ -1,0 +1,5 @@
+#!/bin/bash
+# 1. Open terminal to current folder
+# 2. Execute:
+#    ./setup
+npm install
