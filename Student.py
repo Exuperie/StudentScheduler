@@ -10,5 +10,14 @@ class Student:
 		self.coursesNumber = 0
 		self.coursesList = []
 
-	def addCourses(self, coursesName):
-		coursesNumber += 1
+	def addCourses(self, courseName, courseTime):
+		self.coursesNumber += 1
+		self.coursesList.append([courseName, courseTime[0], courseTime[1]])
+
+	def printProperties(self):
+		print "Name = ", self.name
+		print "Index = ", self.index
+		print "Availability = ", self.availability
+		print "Courses Number = ", self.coursesNumber
+		print "Courses List = ", self.coursesList
+		print 

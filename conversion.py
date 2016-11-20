@@ -29,12 +29,15 @@ def convert(time):
         duration.append(STime)
     #convert ending time
         if time['end'][5:7] == "am":
-            ETime = FTime + float(time['end'][0:2]) + float(time['start']['end'][3:5])/60
+            ETime = FTime + float(time['end'][0:2]) + float(time['end'][3:5])/60
         if time['end'][5:7] == "pm":
             if time['end'][0:2] == '12':
                 ETime = FTime + 12 + float(time['end'][3:5])/60
             else:
                 ETime = FTime + float(time['end'][0:2]) + 12 + float(time['end'][3:5])/60
+        if time['end'] == "3:30pm":
+            ETime = FTime + 15.5
+
         duration.append(ETime)
         return duration
 
