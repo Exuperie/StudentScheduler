@@ -2,6 +2,7 @@ from Student import Student
 import json
 import conversion
 import compare
+from reversetime import reversetime
 from Course import Course
 
 # Initiating Variables
@@ -148,11 +149,18 @@ print " ---- "
 '''
 studentDict = {}
 for student1 in studentList:
+    courseListNew = []
+    for course in student.coursesList:
+        time = []
+        time.append(course[0])
+        time.append(reversetime(course[1]))
+        time.append(reversetime(course[2]))
+        courseListNew.append(time)
 
     data = {'name': student1.name,
             'availability': student1.availability,
             'coursesNumber': student1.coursesNumber,
-            'coursesList': student1.coursesList
+            'coursesList': courseListNew
 
             }
     studentDict[student1.index] = data
@@ -160,9 +168,7 @@ for student1 in studentList:
 with open('outputStudents.json', 'w') as fp:
     json.dump(studentDict, fp)
 
-print studentDict['80']
-
-#with open('outputCourses.json', 'w') as fp:
+# with open('outputCourses.json', 'w') as fp:
 #    json.dump(coursesDict, fp)
 
 ''' Optimization
