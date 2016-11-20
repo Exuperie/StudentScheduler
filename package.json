@@ -1,0 +1,23 @@
+{
+  "name": "junior33",
+  "version": "1.0.0",
+  "description": "Student Scheduler",
+  "main": "index.js",
+  "dependencies": {
+    "json": "^9.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exuperie/Junior_Team33.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Exuperie/Junior_Team33/issues"
+  },
+  "homepage": "https://github.com/Exuperie/Junior_Team33#readme"
+}
