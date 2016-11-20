@@ -78,12 +78,3 @@ for student in studentList:
 print index
 
 
-
-
-
-
-
-
-
-
-

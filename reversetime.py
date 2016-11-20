@@ -13,7 +13,7 @@ def reversetime(num):
 		day = 'Thursday' 
 	if str(num)[0] == '5':
 		day = 'Friday'
-	#then get hour
+	#then get hour & minute
 	hr = str(int(num)%100)
 	minute = str(int((num - int(num))*60))
 
